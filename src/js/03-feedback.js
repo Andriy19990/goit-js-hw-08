@@ -13,7 +13,6 @@ refs.form.addEventListener("submit", throttle(onFormSubmit, 500));
 refs.form.addEventListener("input", event => {
     data[event.target.name] = event.target.value;
     localStorage.setItem(STORAGE_KEY, JSON.stringify(data));
-    console.log(data);
 });
 
 function onFormSubmit(event) {
