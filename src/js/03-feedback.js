@@ -18,6 +18,7 @@ refs.form.addEventListener("input", event => {
 
 function onFormSubmit(event) {
     event.preventDefault();
+    console.log({email: refs.email.value, message: refs.textarea.value});
     event.currentTarget.reset();
     localStorage.removeItem(STORAGE_KEY);
 }
@@ -31,6 +32,5 @@ function formInput() {
         data = parsedData;
         refs.email.value = data.email;
         refs.textarea.value = data.message ;
-        console.log(formInput);
     }
 }
